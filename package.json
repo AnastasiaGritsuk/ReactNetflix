@@ -1,0 +1,17 @@
+{
+  "name": "react-netflix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anastasiya Hrytsuk",
+  "license": "ISC"
+}
