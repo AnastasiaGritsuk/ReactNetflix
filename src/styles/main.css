@@ -60,3 +60,9 @@ h4 {
     padding: 10px 55px 25px;
     background-color: #353535;
 }
+
+.item {
+    display: inline-block;
+    margin: 5px;
+    width: 140px;
+}
