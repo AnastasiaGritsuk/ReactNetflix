@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 .search-wrapper {
     padding: 10px 55px 25px;
     background-color: #353535;
 }
 
 .search-form__input {
+    position: relative;
     height: 30px;
     background-color: grey;
     border: 1px solid grey;
@@ -11,5 +16,27 @@
     width: 100%;
     outline: none;
     color: #fff;
-    padding:0 15px;
+    padding-left: 15px;
+    opacity: 0.5;
+}
+
+.search-form__arrow {}
+
+.search-form__filter {
+    display: flex;
+    align-items: center;
+}
+
+.search-form__actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0;
+}
+
+.search-form__label {
+    display: inline-block;
+    padding-right: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
 }

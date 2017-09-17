@@ -10,10 +10,16 @@ export class Search extends React.Component {
             <form action="#" method="post" className={m.searchForm}>
                 <h2 className={m.h2}>Find your movie</h2>
                 <input type="text" className={s.searchFormInput} />
-
+                <div className={s.searchFormArrow}></div>
+                <div className={s.searchFormActions}>
+                    <div className={s.searchFormFilter}>
+                        <span className={s.searchFormLabel}>Search by</span>
+                        <button type="button" className={[m.btn, m.btnFilter].join(' ')}>Title</button>
+                        <button type="button" className={[m.btn, m.btnFilter].join(' ')}>Director</button>
+                    </div>
+                    <button className={[m.btn, m.btnSearch].join(' ')}>Search</button>
+                </div>
             </form>
-
-
         </div>
     }
 }
