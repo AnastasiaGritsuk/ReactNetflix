@@ -4,7 +4,7 @@ import * as m from '../styles/main.css';
 
 export class Search extends React.Component {
     render() {
-        return <div className={s.searchWrapper}>
+        return <div className={m.wrapper}>
             <h4 className={m.textRed}>netflixroulette</h4>
             <form action="#">
                 <h2 className={m.h2}>Find your movie</h2>

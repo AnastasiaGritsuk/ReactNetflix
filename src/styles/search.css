@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-.search-wrapper {
-    padding: 10px 55px 25px;
-    background-color: #353535;
-}
 
 .search-form__input {
     position: relative;

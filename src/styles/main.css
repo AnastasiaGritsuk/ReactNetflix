@@ -10,6 +10,9 @@
 html {
     font-size: 100%;
 }
+h4 {
+    margin: 0;
+}
 
 .h2 {
     text-transform: uppercase;
@@ -51,4 +54,9 @@ html {
 .results-options {
     display: flex;
     justify-content: space-between;
+}
+
+.wrapper {
+    padding: 10px 55px 25px;
+    background-color: #353535;
 }
