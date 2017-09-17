@@ -10,3 +10,8 @@
 .text-red {
     color: red;
 }
+
+.h2 {
+    text-transform: uppercase;
+    color: #fff;
+}

@@ -2,3 +2,14 @@
     padding: 10px 55px 25px;
     background-color: #353535;
 }
+
+.search-form__input {
+    height: 30px;
+    background-color: grey;
+    border: 1px solid grey;
+    border-bottom: 1px solid red;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    padding:0 15px;
+}
