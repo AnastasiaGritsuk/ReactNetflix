@@ -27,6 +27,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.0.2",
     "style-loader": "^0.18.2",
+    "typed-css-modules-loader": "0.0.11",
     "webpack": "^3.5.6"
   }
 }

@@ -7,13 +7,12 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
 
     entry: {
-        app: './App',
-        main: './styles/main.css'
+        app: './App'
     },
 
     output: {
         filename: '[name].js',
-        path:  path.resolve(__dirname, 'build'),
+        path:  path.resolve(__dirname, 'built'),
     },
 
     resolve: {
@@ -35,10 +34,23 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader"
-                })
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            camelCase: true,
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                        },
+                    }, {
+                        loader: 'typed-css-modules-loader',
+                        options: {
+                            camelCase: true,
+                            outDir: './built/css-modules'
+                        },
+                    }
+                ]
             }]
     },
 
