@@ -5,7 +5,7 @@ module.exports = {
 
     context: path.resolve(__dirname, 'src'),
 
-    entry: './init.js',
+    entry: './App.jsx',
 
     output: {
         filename: 'bundle.js',
@@ -14,6 +14,20 @@ module.exports = {
 
     resolve: {
         extensions: ['.js', 'jsx']
+    },
+
+    module: {
+        rules: [{
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    plugins: ["transform-react-jsx"],
+                    presets: ['env']
+                }
+            }
+        }]
     },
 
     plugins: [
