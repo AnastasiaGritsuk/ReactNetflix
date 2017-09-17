@@ -42,3 +42,13 @@ html {
     background-color: grey;
     margin-right: 15px;
 }
+
+.results-options-wrapper {
+    padding: 15px 55px;
+    background-color: #d1d1d1;
+}
+
+.results-options {
+    display: flex;
+    justify-content: space-between;
+}
