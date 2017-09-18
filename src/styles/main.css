@@ -23,6 +23,11 @@ h4 {
     color: red;
 }
 
+.text-note {
+    font-size: 10px;
+    color: grey;
+}
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -81,6 +86,7 @@ h4 {
     width: 140px;
     height: 200px;
     background-color: grey;
+    margin: 0 0 10px;
 }
 
 .search-form__input {
@@ -120,4 +126,17 @@ h4 {
 .search-header {
     display: flex;
     justify-content: space-between;
+}
+
+.item-caption-wrap {
+    padding: 0 5px;
+}
+
+.item-caption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-title__year {
+    border: 1px solid grey;
 }
