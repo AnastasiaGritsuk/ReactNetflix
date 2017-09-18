@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as style from '../styles/main.css';
+import * as style from '../../styles/main.css';
 
 export class Item extends React.Component {
     render() {

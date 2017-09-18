@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Item} from "./Item";
+import {Item} from "../film/FilmItem";
 
 export class ResultsBody extends React.Component {
     render() {

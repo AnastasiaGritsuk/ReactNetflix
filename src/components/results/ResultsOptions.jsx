@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as m from '../styles/main.css';
+import * as m from '../../styles/main.css';
 
 export class ResultsOptions extends React.Component {
     render() {

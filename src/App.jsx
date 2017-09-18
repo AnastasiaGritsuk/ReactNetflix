@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import * as style from './styles/main.css';
-import {Search} from "./components/Search";
-import {Results} from "./components/Results";
+import {Search} from "./components/search/Search";
+import {Results} from "./components/results/Results";
 import {Footer} from "./components/Footer";
 
 class App extends React.Component {
