@@ -3,7 +3,8 @@ import * as style from '../../styles/main.css';
 
 export class SearchForm extends React.Component {
     render() {
-        return <form action="#">
+        return (
+            <form action="#">
                 <h2 className={style.h2}>Find your movie</h2>
                 <input type="text" className={style.searchFormInput} />
                 <div className={style.searchFormArrow}></div>
@@ -16,5 +17,6 @@ export class SearchForm extends React.Component {
                     <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>Search</button>
                 </div>
             </form>
+        );
     }
 }

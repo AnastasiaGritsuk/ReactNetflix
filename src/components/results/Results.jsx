@@ -4,9 +4,11 @@ import {ResultsBody} from "./ResultsBody";
 
 export class Results extends React.Component {
     render() {
-        return <div className="results">
-            <ResultsOptions/>
-            <ResultsBody/>
-        </div>
+        return (
+            <div className="results">
+                <ResultsOptions/>
+                <ResultsBody/>
+            </div>
+        );
     }
 }
