@@ -8,8 +8,8 @@ export class Film extends React.Component {
                 <img src="" alt=""/>
                 <div className={style.filmCover}>
                     <h4>Title</h4>
-                    <p className={style.filmCoverSupHeader}></p>
-                    <div className={style.filmCoverRatingIcon}></div>
+                    <p className={style.filmCoverSupHeader} />
+                    <div className={style.filmCoverRatingIcon} />
                     <div>
                         <span>1994</span>
                         <span>154 min</span>
