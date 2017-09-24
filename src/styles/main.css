@@ -19,16 +19,16 @@ h4 {
     margin: 0 auto;
 }
 
-.text-red {
+.textRed {
     color: red;
 }
 
-.text-note {
+.textNote {
     font-size: 10px;
     color: grey;
 }
 
-.text-bold {
+.textBold {
     font-weight: bold;
 }
 
@@ -48,18 +48,18 @@ h4 {
     color: #fff;
 }
 
-.btn-search {
+.btnSearch {
     color: red;
     background-color: #ffffff;
     padding: 6px 30px;
     font-size: 14px;
 }
-.btn-search-primary {
+.btnSearchPrimary {
     color: #ffffff;
     background-color: red;
 }
 
-.btn-filter {
+.btnFilter {
     background-color: transparent;
     margin-right: 15px;
     color: #353535;
@@ -68,16 +68,16 @@ h4 {
     font-weight: bold;
 }
 
-.btn-filter-primary {
+.btnFilterPrimary {
     color: red;
 }
 
-.results-options-wrapper {
+.resultsOptionsWrapper {
     padding: 15px 55px;
     background-color: #d1d1d1;
 }
 
-.results-options {
+.resultsOptions {
     display: flex;
     justify-content: space-between;
 }
@@ -93,7 +93,7 @@ h4 {
     width: 140px;
 }
 
-.item__img {
+.itemImg {
     display: block;
     width: 140px;
     height: 200px;
@@ -101,7 +101,7 @@ h4 {
     margin: 0 0 10px;
 }
 
-.search-form__input {
+.searchFormInput {
     position: relative;
     height: 30px;
     background-color: grey;
@@ -114,20 +114,20 @@ h4 {
     opacity: 0.5;
 }
 
-.search-form__arrow {}
+.searchFormArrow {}
 
-.search-form__filter {
+.searchFormfilter {
     display: flex;
     align-items: center;
 }
 
-.search-form__actions {
+.searchFormActions {
     display: flex;
     justify-content: space-between;
     padding: 15px 0 0;
 }
 
-.search-form__label {
+.searchFormLabel {
     display: inline-block;
     padding-right: 15px;
     color: #fff;
@@ -135,29 +135,29 @@ h4 {
     font-size: 10px;
 }
 
-.search-header {
+.searchHeader {
     display: flex;
     justify-content: space-between;
 }
 
-.item-caption-wrap {
+.itemCaptionWrap {
     padding: 0 5px;
 }
 
-.item-caption {
+.itemCaption {
     display: flex;
     justify-content: space-between;
 }
 
-.item-title__year {
+.itemTitleYear {
     border: 1px solid grey;
 }
 
-.results-filter {
+.resultsFilter {
     display: flex;
     justify-content: center;
 }
 
-.results-filter__text {
+.resultsFilterText {
     margin-right: 15px;
 }
