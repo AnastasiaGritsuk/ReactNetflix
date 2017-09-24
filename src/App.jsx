@@ -7,11 +7,13 @@ import {Footer} from "./components/Footer";
 
 class App extends React.Component {
     render() {
-       return <div id={style.container}>
-           <Search/>
-           <Results/>
-           <Footer/>
-       </div>
+       return (
+           <div id={style.container}>
+               <Search/>
+               <Results/>
+               <Footer/>
+           </div>
+       );
     }
 }
 
