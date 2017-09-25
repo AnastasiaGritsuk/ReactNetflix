@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as style from '../../styles/main.css';
+import { Link } from 'react-router-dom';
 
 export class SearchForm extends React.Component {
     render() {
@@ -14,8 +15,9 @@ export class SearchForm extends React.Component {
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Title</button>
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
                     </div>
-                    <button
-                        className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>Search</button>
+                    <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>
+                        <Link to="/search">Search</Link>
+                    </button>
                 </div>
             </form>
         );

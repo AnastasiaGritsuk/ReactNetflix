@@ -25,6 +25,7 @@ ReactDom.render((
             <Switch>
                 <Route exact path="/" component={EmptyResultsBody} />
                 <Route path="/search" component={Results} />
+
             </Switch>
         </App>
     </Router>
