@@ -14,7 +14,8 @@ export class SearchForm extends React.Component {
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Title</button>
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
                     </div>
-                    <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>Search</button>
+                    <button
+                        className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>Search</button>
                 </div>
             </form>
         );
