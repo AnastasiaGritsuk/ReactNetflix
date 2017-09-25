@@ -8,6 +8,7 @@ export class Results extends React.Component {
             <div className="results">
                 <ResultsOptions/>
                 <ResultsBody/>
+                {this.props.children}
             </div>
         );
     }

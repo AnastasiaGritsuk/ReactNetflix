@@ -13,7 +13,7 @@ class App extends React.Component {
            <div id={style.container}>
                <Search/>
                {this.props.children}
-               <Results/>
+
                <Footer/>
            </div>
        );
@@ -24,7 +24,7 @@ ReactDom.render((
         <App>
             <Switch>
                 <Route exact path="/" component={EmptyResultsBody} />
-
+                <Route path="/search" component={Results} />
             </Switch>
         </App>
     </Router>
