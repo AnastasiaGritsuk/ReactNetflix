@@ -40,6 +40,7 @@ ReactDom.render((
                             <Switch>
                                 <Route exact path="/" component={EmptyResultsBody} />
                                 <Route path="/search" component={ResultsBody} />
+                                <Route path="/film" component={ResultsBody} />
                             </Switch>
                         </Results>
                     </div>
