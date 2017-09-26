@@ -6,12 +6,16 @@ import {Results} from "./components/results/Results";
 import {Footer} from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {EmptyResultsBody} from "./components/results/EmptyResultsBody";
+import {SearchHeader} from "./components/search/SearchHeader";
+import {SearchForm} from "./components/search/SearchForm";
+import {FilmCover} from "./components/film/FilmCover";
+import {ResultsBody} from "./components/results/ResultsBody";
 
 class App extends React.Component {
     render() {
        return (
            <div id={style.container}>
-               <Search/>
+
                {this.props.children}
 
                <Footer/>
@@ -19,13 +23,27 @@ class App extends React.Component {
        );
     }
 }
+
 ReactDom.render((
     <Router>
         <App>
             <Switch>
-                <Route exact path="/" component={EmptyResultsBody} />
-                <Route path="/search" component={Results} />
-
+                <Route path="/">
+                    <div>
+                        <Search>
+                            <Switch>
+                                <Route path="/film" component={FilmCover} />
+                                <Route path="*" component={SearchForm} />
+                            </Switch>
+                        </Search>
+                        <Results>
+                            <Switch>
+                                <Route exact path="/" component={EmptyResultsBody} />
+                                <Route path="/search" component={ResultsBody} />
+                            </Switch>
+                        </Results>
+                    </div>
+                </Route>
             </Switch>
         </App>
     </Router>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as style from '../../styles/main.css';
+import { Link } from 'react-router-dom';
 
 export class Item extends React.Component {
     render() {
@@ -8,7 +9,9 @@ export class Item extends React.Component {
                 <img src="" className={style.itemImg} alt=""/>
                 <div className={style.itemCaptionWrap}>
                     <div className={style.itemCaption}>
-                        <h4 className={style.itemTitle}>Kill Bill</h4>
+                        <a className={style.itemTitle}>
+                            <Link to="/film">Kill Bill</Link>
+                        </a>
                         <span className={style.itemTitleYear}>2012</span>
                     </div>
                     <p className={style.textNote}>Dramas</p>
