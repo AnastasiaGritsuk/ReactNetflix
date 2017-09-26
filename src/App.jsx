@@ -6,7 +6,6 @@ import {Results} from "./components/results/Results";
 import {Footer} from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {EmptyResultsBody} from "./components/results/EmptyResultsBody";
-import {SearchHeader} from "./components/search/SearchHeader";
 import {SearchForm} from "./components/search/SearchForm";
 import {FilmCover} from "./components/film/FilmCover";
 import {ResultsBody} from "./components/results/ResultsBody";
@@ -33,7 +32,7 @@ ReactDom.render((
                         <Search>
                             <Switch>
                                 <Route path="/film" component={FilmCover} />
-                                <Route path="*" component={SearchForm} />
+                                <Route path="/" component={SearchForm} />
                             </Switch>
                         </Search>
                         <Results>
