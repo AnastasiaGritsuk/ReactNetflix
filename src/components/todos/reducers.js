@@ -21,6 +21,16 @@ function todoApp(state = initialState, action) {
                     }
                 ]
             });
+        case TOGGLE_TODO:
+            return Object.assign({}, state, {
+                todos: state.todos.map((todo, index)=>{
+                    if(index === action.index) {
+                        return Object.assign({}, todo, {
+                            completed: !todo.completed
+                        });
+                    }
+                })
+            });
         default:
             return state;
     }
