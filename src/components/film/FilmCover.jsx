@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as style from '../../styles/main.css';
 
-export class Film extends React.Component {
+export class FilmCover extends React.Component {
     render() {
         return <div className={style.filmWrapper}>
             <img src="" alt=""/>
