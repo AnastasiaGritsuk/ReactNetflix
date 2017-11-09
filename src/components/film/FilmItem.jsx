@@ -9,7 +9,7 @@ export class Item extends React.Component {
                 <img src="" className={style.itemImg} alt=""/>
                 <div className={style.itemCaptionWrap}>
                     <div className={style.itemCaption}>
-                        <a className={style.itemTitle}>
+                        <a className={style.itemTitle} onClick={this.props.goToFilm}>
                             <Link to="/film">{this.props.film.title}}</Link>
                         </a>
                         <span className={style.itemTitleYear}>{this.props.film.releaseYear}</span>
