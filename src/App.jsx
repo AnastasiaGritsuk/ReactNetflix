@@ -24,15 +24,15 @@ ReactDom.render((
                         <div>
                             <Search>
                                 <Switch>
-                                    <Route path="/film" component={FilmCover} />
+                                    <Route path="/film/:title" component={FilmCover} />
                                     <Route path="/" component={SearchForm} />
                                 </Switch>
                             </Search>
                             <Results>
                                 <Switch>
                                     <Route exact path="/" component={EmptyResultsBody} />
-                                    <Route path="/search" component={ResultsBody} />
-                                    <Route path="/film" component={ResultsBody} />
+                                    <Route path="/search/:searchQuery?" component={ResultsBody} />
+                                    <Route path="/film/:title" component={ResultsBody} />
                                 </Switch>
                             </Results>
                         </div>
