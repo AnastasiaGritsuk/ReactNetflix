@@ -7,7 +7,7 @@ export class SearchForm extends React.Component {
         return (
             <form action="#">
                 <h2 className={style.h2}>Find your movie</h2>
-                <input type="text" className={style.searchFormInput} />
+                <input type="text" className={style.searchFormInput} defaultValue={this.props.query} ref={(input) => this.query = input}/>
                 <div className={style.searchFormArrow}></div>
                 <div className={style.searchFormActions}>
                     <div className={style.searchFormFilter}>
@@ -16,7 +16,7 @@ export class SearchForm extends React.Component {
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
                     </div>
                     <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')} 
-                        oncClick={this.props.onClick}>
+                    onClick={props.onClick}>
                         <Link to="/search">{this.props.title}</Link>
                     </button>
                 </div>
