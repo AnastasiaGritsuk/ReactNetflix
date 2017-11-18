@@ -1,7 +1,9 @@
-const initialState = {
-    films: [1]
-};
+import { combineReducers } from 'redux';
 
-export function appState(state = initialState) {
-    return state;
-}
+import SearchReducer from '../containers/searchContainer/searchData/searchReducer';
+
+const rootReducer = combineReducers({
+    searchPage: SearchReducer
+});
+
+export default rootReducer;

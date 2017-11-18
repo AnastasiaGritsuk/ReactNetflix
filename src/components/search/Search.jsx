@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as style from '../../styles/main.css';
 
-export class Search extends React.Component {
+export default class Search extends React.Component {
     render() {
         return (
             <div className={style.wrapper}>

@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import {Search} from "./components/search/Search";
+import Search from "./components/search/Search";
 import {Results} from "./components/results/Results";
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {EmptyResultsBody} from "./components/results/EmptyResultsBody";
 import {SearchForm} from "./components/search/SearchForm";
@@ -10,10 +9,9 @@ import {FilmCover} from "./components/film/FilmCover";
 import {ResultsBody} from "./components/results/ResultsBody";
 import App from "./components/App";
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { appState } from './reducers/index'
+import configureStore from './store/store';
 
-const store = createStore(appState);
+const store = configureStore({})
 
 ReactDom.render((
     <Provider store={store}>

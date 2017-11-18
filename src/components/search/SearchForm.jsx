@@ -3,11 +3,15 @@ import * as style from '../../styles/main.css';
 import { Link } from 'react-router-dom';
 
 export class SearchForm extends React.Component {
+    constructor (props) {
+        super(props);
+    }
     render() {
         return (
             <form action="#">
                 <h2 className={style.h2}>Find your movie</h2>
-                <input type="text" className={style.searchFormInput} defaultValue={this.props.query} ref={(input) => this.query = input}/>
+                <input type="text" className={style.searchFormInput} defaultValue={this.props.query}
+                       ref={(input) => this.query = input}/>
                 <div className={style.searchFormArrow}></div>
                 <div className={style.searchFormActions}>
                     <div className={style.searchFormFilter}>
@@ -16,7 +20,7 @@ export class SearchForm extends React.Component {
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
                     </div>
                     <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')} 
-                    onClick={props.onClick}>
+                    onClick={this.props.onClick}>
                         <Link to="/search">{this.props.title}</Link>
                     </button>
                 </div>
