@@ -6,7 +6,7 @@ function getFilmsByTitle(query) {
         .then(mapFilms);
 }
 
-function getFilm (id) {
+function getFilm(id) {
     return runFetch(`${BASE_URL}movie/${id}?api_key=${API_KEY}`)
         .then(mapFilm);
 }
@@ -16,12 +16,8 @@ function runFetch(url) {
         .then(response =>
             Promise.resolve(response.json())
                 .then((json) => {
-            console.log("response ");
-            console.dir(json);
                     if (response.ok) {
-                        console.log("response.ok")
                         return json;
-
                     }
                     throw new Error({ response, json });
                 })
