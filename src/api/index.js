@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = 'abd4c37a5cef07bca30399bfd8f86cae';
+const API_KEY = 'f190dee41ac809cd881417fd582347eb';
 
 function getFilmsByTitle(query) {
     return runFetch(`${BASE_URL}search/movie?api_key=${API_KEY}&query=${encodeURI(query)}`)
