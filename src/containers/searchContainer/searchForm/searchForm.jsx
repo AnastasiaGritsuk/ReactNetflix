@@ -1,5 +1,6 @@
 import React from 'react';
 import * as style from '../../../styles/main.css';
+import Toggler from '../../../components/toggler/Toggler';
 
 export default class SearchForm extends React.Component {
     constructor (props) {
@@ -21,8 +22,11 @@ export default class SearchForm extends React.Component {
                 <div className={style.searchFormActions}>
                     <div className={style.searchFormFilter}>
                         <span className={style.searchFormLabel}>Search by</span>
-                        <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Title</button>
-                        <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
+                        <Toggler
+                            options={this.props.sources}
+                            selectedValue={this.props.selectedValue}
+                            onChange={this.props.changeSource}
+                        />
                     </div>
                     <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}
                             onClick={this.search}>

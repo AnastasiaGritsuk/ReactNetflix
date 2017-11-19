@@ -41,6 +41,9 @@ class SearchContainer extends React.Component {
         return (
             <App>
                 <SearchForm
+                    sources={SOURCES}
+                    changeSource={this.changeSource}
+                    selectedValue={this.props.page.source}
                     search={this.changeQuery}
                     query={this.props.page.query}
                 />
