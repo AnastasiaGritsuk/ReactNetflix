@@ -4,6 +4,7 @@ import {SORTS, SOURCES, SEARCH_URL} from './searchData/consts'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as pageActions from './searchData/searchActions'
+import  SearchForm from './searchForm/searchForm'
 
 class SearchContainer extends React.Component {
     constructor (props) {
@@ -15,6 +16,7 @@ class SearchContainer extends React.Component {
 
     componentWillMount () {
         const query = this.props.match.params.searchQuery || '';
+        console.log("params.searchQuery " + query);
         this.changeQuery(query);
     }
 
@@ -28,6 +30,7 @@ class SearchContainer extends React.Component {
     }
 
     changeQuery (query) {
+        console.log("changeQuery" + query);
         this.props.pageActions.searchFilms(query, this.props.page.sortBy);
 
         const searchUrl = `${SEARCH_URL}${query}`;
@@ -37,19 +40,23 @@ class SearchContainer extends React.Component {
     render() {
         return (
             <App>
+                <SearchForm
+                    search={this.changeQuery}
+                    query={this.props.page.query}
+                />
             </App>
         );
     }
 }
 
 function mapStateToProps (state) {
+    console.log("mapStateToProps");
     return {
         page: state.searchContainer
     }
 }
 
 function mapDispatchToProps(dispatch) {
-    console.dir(pageActions);
     return {
         pageActions: bindActionCreators(pageActions, dispatch)
     }

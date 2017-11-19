@@ -13,7 +13,6 @@ ReactDom.render((
             <Switch>
                 <Route exact path="/" component={SearchContainer} />
                 <Route path="/search/:searchQuery?" component={SearchContainer} />
-                <Route path="/film/:title"  />
             </Switch>
         </Router>
     </Provider>

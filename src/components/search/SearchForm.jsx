@@ -20,8 +20,8 @@ export class SearchFormComponent extends React.Component {
                         <button type="button" className={[style.btn, style.btnFilter].join(' ')}>Director</button>
                     </div>
                     <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')} 
-                    onClick={this.props.onClick}>
-                        <Link to="/search">{this.props.title}</Link>
+                    onClick={this.props.search}>
+                        Search
                     </button>
                 </div>
             </form>

@@ -9,7 +9,6 @@ export class SearchHeader extends React.Component {
             <div className={style.searchHeader}>
                 <h4 className={style.textRed}>netflixroulette</h4>
                 <button className={[style.btn, style.btnSearch, style.btnSearchPrimary].join(' ')}>
-                    <Link to="/search">Search</Link>
                 </button>
             </div>
         );

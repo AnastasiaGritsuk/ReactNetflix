@@ -10,7 +10,6 @@ export class App extends React.Component {
         return (
             <div className="app" id={style.container}>
                 {this.props.children}
-                Hi from Nastya
                 <Footer/>
             </div>
         );

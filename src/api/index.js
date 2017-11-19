@@ -2,20 +2,25 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'abd4c37a5cef07bca30399bfd8f86cae';
 
 function getFilmsByTitle(query) {
+    console.log("getFilmsByTitle");
     return runFetch(`${BASE_URL}search/film?api_key=${API_KEY}&query=${encodeURI(query)}`)
         .then(mapFilms);
 }
 
 function getFilm (id) {
+    console.log("getFilm");
     return runFetch(`${BASE_URL}film/${id}?api_key=${API_KEY}`)
         .then(mapFilm);
 }
 
 function runFetch(url) {
+    console.log("runFetch");
     return fetch(url)
         .then(response =>
             Promise.resolve(response.json())
                 .then((json) => {
+            console.log("response ");
+            console.dir(json);
                     if (response.ok) {
                         return json;
                     }
