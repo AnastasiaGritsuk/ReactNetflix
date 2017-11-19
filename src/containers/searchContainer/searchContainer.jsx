@@ -1,22 +1,30 @@
 import * as React from "react";
-import Page from '../../components/App'
-import SearchForm from './SearchForm/SearchForm'
-import SearchResultsOptions from './SearchResultsOptions/SearchResultsOptions'
-import SearchResults from './SearchResults/SearchResults'
-import * as pageActions from './searchData/searchActions'
+import { App } from '../../components/App'
 import {SORTS, SOURCES, SEARCH_URL} from './searchData/consts'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import * as pageActions from './searchData/searchActions'
 
-export class SearchContainer extends React.Component {
+class SearchContainer extends React.Component {
     constructor (props) {
         super(props);
+        this.changeSort = this.changeSort.bind(this);
+        this.changeSource = this.changeSource.bind(this);
         this.changeQuery = this.changeQuery.bind(this);
     }
 
     componentWillMount () {
         const query = this.props.match.params.searchQuery || '';
         this.changeQuery(query);
+    }
+
+    changeSort (sortValue) {
+        this.props.pageActions.changeSort(sortValue);
+        this.props.pageActions.sort(this.props.page.films, sortValue);
+    }
+
+    changeSource (sourceValue) {
+        this.props.pageActions.changeSource(sourceValue);
     }
 
     changeQuery (query) {
@@ -28,30 +36,20 @@ export class SearchContainer extends React.Component {
 
     render() {
         return (
-            <Page>
-                <SearchForm
-                    selectedValue={this.props.page.source}
-                    query={this.props.page.query}
-                />
-                <SearchResultsOptions
-                    
-                />
-                <SearchResults
-                    films={this.props.page.films}
-                    history={this.props.history}
-                />
-            </Page>
+            <App>
+            </App>
         );
     }
 }
 
 function mapStateToProps (state) {
     return {
-        page: state.searchPage
+        page: state.searchContainer
     }
 }
 
 function mapDispatchToProps(dispatch) {
+    console.dir(pageActions);
     return {
         pageActions: bindActionCreators(pageActions, dispatch)
     }

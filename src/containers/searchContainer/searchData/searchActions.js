@@ -1,4 +1,4 @@
-import {fetchFilmsByTitle} from '../../../api/api';
+import {getFilmsByTitle} from '../../../api/index';
 import {SORTS, SEARCH_ACTIONS} from './consts';
 
 export function searchFilms (query, sortBy) {
@@ -8,7 +8,7 @@ export function searchFilms (query, sortBy) {
             payload: query
         });
 
-        fetchFilmsByTitle(query)
+        getFilmsByTitle(query)
             .then((films) => {
                 dispatch({
                     type: SEARCH_ACTIONS.SEARCH_FILM_SUCCESS,

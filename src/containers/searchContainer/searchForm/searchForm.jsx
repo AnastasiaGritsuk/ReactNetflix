@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../../../components/search/Search'
-import SearchForm from '../../../components/search/SearchForm'
+import { SearchFormComponent } from '../../../components/search/SearchForm'
 
 export default class SearchForm extends React.Component {
     constructor (props) {
@@ -17,7 +17,7 @@ export default class SearchForm extends React.Component {
         return (
             <div className="search-bar">
                 <Search />
-                <SearchForm
+                <SearchFormComponent
                     onClick={this.search}
                     defaultValue={this.props.query}/>
                 <div className="movie-search-container">

@@ -2,7 +2,7 @@ import * as React from "react";
 import * as style from '../../styles/main.css';
 import { Link } from 'react-router-dom';
 
-export class SearchForm extends React.Component {
+export class SearchFormComponent extends React.Component {
     constructor (props) {
         super(props);
     }
