@@ -2,19 +2,16 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'abd4c37a5cef07bca30399bfd8f86cae';
 
 function getFilmsByTitle(query) {
-    console.log("getFilmsByTitle");
-    return runFetch(`${BASE_URL}search/film?api_key=${API_KEY}&query=${encodeURI(query)}`)
+    return runFetch(`${BASE_URL}search/movie?api_key=${API_KEY}&query=${encodeURI(query)}`)
         .then(mapFilms);
 }
 
 function getFilm (id) {
-    console.log("getFilm");
-    return runFetch(`${BASE_URL}film/${id}?api_key=${API_KEY}`)
+    return runFetch(`${BASE_URL}movie/${id}?api_key=${API_KEY}`)
         .then(mapFilm);
 }
 
 function runFetch(url) {
-    console.log("runFetch");
     return fetch(url)
         .then(response =>
             Promise.resolve(response.json())
@@ -22,7 +19,9 @@ function runFetch(url) {
             console.log("response ");
             console.dir(json);
                     if (response.ok) {
+                        console.log("response.ok")
                         return json;
+
                     }
                     throw new Error({ response, json });
                 })
@@ -30,10 +29,12 @@ function runFetch(url) {
 }
 
 function mapFilms(result) {
-    return result.results.map(mapFilms);
+    console.log("mapFilms " + result);
+    return result.results.map(mapFilm);
 }
 
 function mapFilm(film) {
+    console.log("mapFilm");
     return {
         id: film.id,
         title: film.title,

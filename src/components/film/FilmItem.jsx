@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as style from '../../styles/main.css';
-import { Link } from 'react-router-dom';
 
 export class FilmItem extends React.Component {
     render() {
@@ -10,7 +9,6 @@ export class FilmItem extends React.Component {
                 <div className={style.itemCaptionWrap}>
                     <div className={style.itemCaption}>
                         <a className={style.itemTitle} onClick={this.props.goToFilm}>
-                            <Link to="/film">{this.props.film.title}}</Link>
                         </a>
                         <span className={style.itemTitleYear}>{this.props.film.releaseYear}</span>
                     </div>

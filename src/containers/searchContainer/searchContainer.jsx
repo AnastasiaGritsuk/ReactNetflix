@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as pageActions from './searchData/searchActions'
 import  SearchForm from './searchForm/searchForm'
+import  { SearchResults } from './searchResults/searchResults'
 
 class SearchContainer extends React.Component {
     constructor (props) {
@@ -16,7 +17,6 @@ class SearchContainer extends React.Component {
 
     componentWillMount () {
         const query = this.props.match.params.searchQuery || '';
-        console.log("params.searchQuery " + query);
         this.changeQuery(query);
     }
 
@@ -30,7 +30,7 @@ class SearchContainer extends React.Component {
     }
 
     changeQuery (query) {
-        console.log("changeQuery" + query);
+        console.log("changeQuery " + query);
         this.props.pageActions.searchFilms(query, this.props.page.sortBy);
 
         const searchUrl = `${SEARCH_URL}${query}`;
@@ -44,13 +44,16 @@ class SearchContainer extends React.Component {
                     search={this.changeQuery}
                     query={this.props.page.query}
                 />
+                <SearchResults
+                    films={this.props.page.films}
+                    history={this.props.history}
+                />
             </App>
         );
     }
 }
 
 function mapStateToProps (state) {
-    console.log("mapStateToProps");
     return {
         page: state.searchContainer
     }

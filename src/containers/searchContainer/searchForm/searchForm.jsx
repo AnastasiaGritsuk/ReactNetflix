@@ -13,7 +13,7 @@ export default class SearchForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={style.wrapper}>
                 <h2 className={style.h2}>Find your movie</h2>
                 <input type="text" className={style.searchFormInput} defaultValue={this.props.query}
                        ref={(input) => this.query = input}/>
