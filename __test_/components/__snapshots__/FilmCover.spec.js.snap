@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should show movie info 1`] = `
+<div>
+  <img
+    alt=""
+    src=""
+  />
+  <div>
+    <h4>
+      Title 
+      Film test
+    </h4>
+    <p />
+    <div>
+      Rating 
+      5
+    </div>
+    <div>
+      <span>
+        1994 
+        2017
+      </span>
+      <span>
+        154 min 
+        120
+      </span>
+    </div>
+    <p>
+      bla bla bla 
+    </p>
+    <p>
+      director 
+      director test
+    </p>
+    <p>
+      cast list
+    </p>
+  </div>
+</div>
+`;
