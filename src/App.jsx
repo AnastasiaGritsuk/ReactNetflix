@@ -8,7 +8,7 @@ import DetailsPage  from './containers/detailsContainer/detailsContainer'
 
 const store = configureStore({})
 
-ReactDom.render((
+var App = ReactDom.render((
     <Provider store={store}>
         <Router>
             <Switch>
@@ -20,3 +20,5 @@ ReactDom.render((
         </Router>
     </Provider>
 ),document.getElementById("root"));
+
+export default App;
